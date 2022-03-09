@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/library/css/users.css">
+</head>
+<body>
+    <div class="main">
+        <div class="search-pane">
+            <button class="btn btn-success add-button" data-toggle="modal" data-target="#users-modal">添加用户</button>
+            <input type="text" name="search" id="search" placeholder="请输入搜索的内容">
+            <button class="btn btn-primary search-button">搜索</button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>组别</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>性别</th>
+                <th>借书卡号</th>
+                <th>手机号</th>
+                <th>身份</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="users-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <div class="modal-body">
+                    <form id="users-form" name="users-form" class="users-form">
+                        <div class="form-group">
+                            <label for="groups">组别</label>
+                            <input type="text" class="form-control" placeholder="请输入组别" id="groups" name="groups">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input type="text" class="form-control" placeholder="请输入用户名" id="username" name="username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="text" class="form-control" placeholder="请输入密码" id="password" name="password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">性别</label>
+                            <input type="text" class="form-control" placeholder="请输入性别" id="gender" name="gender">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_card">借书卡号</label>
+                            <input type="text" class="form-control" placeholder="请输入借书卡号" id="id_card" name="id_card" maxlength="8">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">手机号</label>
+                            <input type="text" class="form-control" placeholder="请输入手机号" id="phone" name="phone" maxlength="11">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="identity">身份</label>
+                            <input type="text" class="form-control" placeholder="请输入身份" id="identity" name="identity">
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success operate-button"></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delete-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+        
+                <div class="modal-header">
+                <h4 class="modal-title">删除用户</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <div class="modal-body">
+                <p class="tip"></p>
+                </div>
+        
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger delete-button">删除</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/library//js/config.js"></script>
+<script src="/library/js/users.js"></script>
+</html>

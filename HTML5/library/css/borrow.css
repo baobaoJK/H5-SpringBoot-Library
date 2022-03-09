@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html,
+body,
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+/* 主页面样式 */
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 搜索栏样式 */
+.search-pane{
+    display: flex;
+    margin-bottom: 32px;
+}
+.search-pane .search-input{
+    width: 480px;
+    height: 38px;
+    border-radius: 8px 0px 0px 8px;
+    border: 2px solid #007BFF;
+    padding-left: 12px;
+}
+.search-pane .search-button{
+    width: 70px;
+    border: transparent;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* 信息栏样式 */
+.info-pane{
+    display: flex;
+    width: 550px;
+}
+.info-pane div{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.info-pane .user input{
+    margin-top: 12px;
+    padding: 4px;
+    border-radius: 4px;
+}
+.info-pane .user input[type=text]{
+    border: 1px solid rgb(77, 77, 77);
+}
+

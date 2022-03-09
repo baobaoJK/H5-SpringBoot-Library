@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+}
+
+html,body,.main{
+    width: 100%;
+    height: 100%;
+}
+
+/* 主页面样式 */
+.main{
+    display: flex;
+}
+
+/* 侧边导航栏样式 */
+.manage-nav{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    min-width: 256px;
+    max-width: 256px;
+    height: 100%;
+    text-align: center;
+
+}
+
+/* 面板样式 */
+.main-pane{
+    margin-left: 256px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 用户导航栏样式 */
+.user-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    min-width: calc(100% - 256px);
+    height: 64px;
+    background-color: rgb(248, 248, 248);
+}
+.user-nav .username{
+    padding: 0;
+    margin: 0;
+    margin-right: 64px;
+}
+
+/* 信息面板样式 */
+.info-pane{
+    margin-top: 64px;
+    min-width: calc(100% - 256px);
+    min-height: calc(100% - 64px);
+    height: calc(100% -  64px);
+    background-color: white;
+}
+.info-pane iframe{
+    width: 100%;
+    height: 100%;
+}

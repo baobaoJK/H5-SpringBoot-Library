@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/library/css/books.css">
+</head>
+<body>
+    <div class="main">
+        <div class="search-pane">
+            <button class="btn btn-success add-button" data-toggle="modal" data-target="#book-modal">添加书籍</button>
+            <input type="text" name="search" id="search" placeholder="请输入搜索的内容">
+            <button class="btn btn-primary search-button">搜索</button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>组名</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>出版社</th>
+                <th>价格（人民币）</th>
+                <th>数量（本）</th>
+                <th>ISBN号码</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="book-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <div class="modal-body">
+                    <form id="book-form" name="book-form" class="book-form">
+                        <div class="form-group">
+                            <label for="groups">图书组名</label>
+                            <input type="text" class="form-control" placeholder="请输入图书组名" id="groups" name="groups">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">图书名称</label>
+                            <input type="text" class="form-control" placeholder="请输入图书名称" id="name" name="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">作者名称:</label>
+                            <input type="text" class="form-control" placeholder="请输入作者名称" id="author" name="author">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="press">出版社名称:</label>
+                            <input type="text" class="form-control" placeholder="请输入出版社名称" id="press" name="press">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">价格（人民币）:</label>
+                            <input type="text" class="form-control" placeholder="请输入价格" id="price" name="price" maxlength="10">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">数量（本）:</label>
+                            <input type="text" class="form-control" placeholder="请输入数量" id="quantity" name="quantity" maxlength="4">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="isbn">ISBN号码:</label>
+                            <input type="text" class="form-control" placeholder="请输入ISBN号码" id="isbn" name="isbn" maxlength="13">
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success operate-button"></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delete-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+        
+                <div class="modal-header">
+                <h4 class="modal-title">删除图书</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <div class="modal-body">
+                <p class="tip"></p>
+                </div>
+        
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger delete-button">删除</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/library//js/config.js"></script>
+<script src="/library/js/books.js"></script>
+</html>
